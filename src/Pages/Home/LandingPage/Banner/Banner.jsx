@@ -25,7 +25,7 @@ const Banner = () => {
             Welcome to CineScope
           </p>
 
-          <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl text-white">
             Discover Your Next
             <span className="block text-red-500">Favorite Movie</span>
           </h1>
