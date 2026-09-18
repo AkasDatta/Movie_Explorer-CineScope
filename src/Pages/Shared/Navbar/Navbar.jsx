@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { FiPlay, FiArrowRight } from "react-icons/fi";
 
 const Navbar = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="bg-slate-950 text-white">
       {/* Navbar */}
       <nav className="border-b border-white/10 bg-slate-950/90 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
