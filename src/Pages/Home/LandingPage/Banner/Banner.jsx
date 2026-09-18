@@ -1,59 +1,66 @@
-import { FiArrowRight, FiPlay } from "react-icons/fi";
-import { Link } from "react-router";
+import { FiPlay } from "react-icons/fi";
 
 const Banner = () => {
   return (
-    //    {/* Hero Banner */}
-    <section className="relative overflow-hidden">
-      {/* Background */}
+    <section className="relative h-screen min-h-[650px] w-full overflow-hidden bg-black">
+      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=2000&q=80')",
+            "url('https://images.unsplash.com/photo-1569346276519-709519eeaa51?q=80&w=882&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
         }}
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-slate-950/75" />
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-slate-950/30" />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/45" />
 
-      {/* Content */}
-      <div className="relative mx-auto flex min-h-[600px] max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-red-500">
-            Welcome to CineScope
+      {/* Extra cinematic gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/60" />
+
+      {/* Hero content */}
+      <div className="relative z-10 flex h-full items-center justify-center">
+        <div className="relative w-full text-center">
+          {/* Small text */}
+          <p className="mb-3 font-sans text-[9px] uppercase tracking-[0.45em] text-white/80 md:text-[10px]">
+            A Film About
           </p>
 
-          <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl text-white">
-            Discover Your Next
-            <span className="block text-red-500">Favorite Movie</span>
+          {/* Big background word */}
+          <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-serif text-[75px] font-light uppercase tracking-[-0.04em] text-transparent opacity-20 [-webkit-text-stroke:1px_rgba(255,255,255,0.5)] sm:text-[110px] md:text-[160px] lg:text-[210px]">
+            CineScope
+          </div>
+
+          {/* Main title */}
+          <h1 className="relative font-serif text-[52px] font-medium uppercase leading-none tracking-[0.12em] text-white sm:text-[70px] md:text-[100px] lg:text-[125px]">
+            CineScope
           </h1>
 
-          <p className="mt-6 max-w-xl text-base leading-7 text-gray-300 sm:text-lg">
-            Explore a world of movies, discover exciting stories, and find your
-            next favorite film. Browse movies and explore detailed information
-            all in one place.
-          </p>
+          {/* Play button */}
+          <button className="group mx-auto mt-12 flex h-14 w-14 items-center justify-center rounded-full border border-white/50 transition-all duration-300 hover:bg-white hover:text-black">
+            <FiPlay
+              size={15}
+              strokeWidth={1}
+              className="ml-0.5 transition-transform duration-300 group-hover:scale-110"
+            />
+          </button>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              to="/movies"
-              className="flex items-center gap-2 rounded-lg bg-red-600 px-6 py-3 font-semibold transition hover:bg-red-700"
-            >
-              <FiPlay className="fill-white" />
-              Explore Movies
-            </Link>
-
-            <Link
-              to="/movies"
-              className="flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-6 py-3 font-semibold backdrop-blur-sm transition hover:bg-white/20"
-            >
-              Browse Collection
-              <FiArrowRight />
-            </Link>
+          {/* Bottom information */}
+          <div className="mt-12 flex justify-center gap-8 font-sans text-[8px] uppercase tracking-[0.25em] text-white/60">
+            <span>Official Selection</span>
+            <span>2026</span>
+            <span>Drama</span>
           </div>
         </div>
+      </div>
+
+      {/* Bottom scroll indicator */}
+      <div className="absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3">
+        <span className="font-sans text-[7px] uppercase tracking-[0.35em] text-white/60">
+          Scroll
+        </span>
+
+        <span className="h-8 w-px bg-white/40" />
       </div>
     </section>
   );

@@ -1,113 +1,95 @@
-import { useState } from "react";
 import { Link } from "react-router";
-import { FiPlay, FiArrowRight, FiMenu, FiX } from "react-icons/fi";
+import {
+  FiMenu,
+  FiSearch,
+  FiUser,
+  FiInstagram,
+  FiFacebook,
+} from "react-icons/fi";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
-    <nav className="relative z-50 border-b border-white/10 bg-slate-950/95 text-white backdrop-blur-md">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
+    <header className="absolute top-0 left-0 z-50 w-full text-white">
+      <div className="mx-auto flex h-[75px] max-w-[1450px] items-center justify-between px-6 md:px-10 lg:px-14">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="font-sans text-[11px] font-medium tracking-[0.35em]"
+        >
+          MOVIE EXPLORER
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-8 lg:flex">
           <Link
             to="/"
-            className="flex items-center gap-2"
-            onClick={() => setMenuOpen(false)}
+            className="font-sans text-[9px] uppercase tracking-[0.18em] transition-opacity hover:opacity-60"
           >
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-red-600">
-              <FiPlay className="fill-white text-lg" />
-            </div>
-
-            <span className="text-xl font-bold tracking-tight">
-              Cine<span className="text-red-500">Scope</span>
-            </span>
+            Home
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden items-center gap-8 md:flex">
-            <Link
-              to="/"
-              className="text-sm font-medium text-gray-300 transition hover:text-white"
-            >
-              Home
-            </Link>
-
-            <Link
-              to="/movies"
-              className="text-sm font-medium text-gray-300 transition hover:text-white"
-            >
-              Movies
-            </Link>
-
-            <Link
-              to="/about"
-              className="text-sm font-medium text-gray-300 transition hover:text-white"
-            >
-              About
-            </Link>
-          </div>
-
-          {/* Desktop CTA */}
           <Link
             to="/movies"
-            className="hidden items-center gap-2 rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold transition hover:bg-red-700 md:flex"
+            className="font-sans text-[9px] uppercase tracking-[0.18em] transition-opacity hover:opacity-60"
           >
-            Explore Movies
-            <FiArrowRight />
+            Movies
           </Link>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="flex items-center justify-center text-2xl text-gray-200 md:hidden"
-            aria-label="Toggle menu"
+          <Link
+            to="/about"
+            className="font-sans text-[9px] uppercase tracking-[0.18em] transition-opacity hover:opacity-60"
           >
-            {menuOpen ? <FiX /> : <FiMenu />}
+            About
+          </Link>
+
+          <Link
+            to="/blog"
+            className="font-sans text-[9px] uppercase tracking-[0.18em] transition-opacity hover:opacity-60"
+          >
+            Blog
+          </Link>
+
+          <Link
+            to="/shop"
+            className="font-sans text-[9px] uppercase tracking-[0.18em] transition-opacity hover:opacity-60"
+          >
+            Shop
+          </Link>
+
+          {/* <Link
+            to="/elements"
+            className="font-sans text-[9px] uppercase tracking-[0.18em] transition-opacity hover:opacity-60"
+          >
+            Elements
+          </Link> */}
+        </nav>
+
+        {/* Right side */}
+        <div className="flex items-center gap-4">
+          <span className="hidden items-center gap-1.5 font-sans text-[8px] uppercase tracking-[0.15em] md:flex">
+            <span className="text-[9px]">♥</span>
+            Tickets
+          </span>
+
+          <button className="hidden md:block">
+            <FiSearch size={12} strokeWidth={1} />
+          </button>
+
+          <button className="hidden md:block">
+            <FiInstagram size={12} strokeWidth={1} />
+          </button>
+
+          <button className="hidden md:block">
+            <FiFacebook size={12} strokeWidth={1} />
+          </button>
+
+          {/* Mobile menu */}
+          <button className="lg:hidden">
+            <FiMenu size={20} strokeWidth={1} />
           </button>
         </div>
-
-        {/* Mobile Menu - Overlay */}
-        {menuOpen && (
-          <div className="absolute left-0 right-0 top-16 border-t border-white/10 bg-slate-950/98 px-4 py-4 shadow-xl md:hidden">
-            <div className="mx-auto flex max-w-7xl flex-col gap-2">
-              <Link
-                to="/"
-                onClick={() => setMenuOpen(false)}
-                className="rounded-lg px-3 py-3 text-sm font-medium text-gray-300 transition hover:bg-white/5 hover:text-white"
-              >
-                Home
-              </Link>
-
-              <Link
-                to="/movies"
-                onClick={() => setMenuOpen(false)}
-                className="rounded-lg px-3 py-3 text-sm font-medium text-gray-300 transition hover:bg-white/5 hover:text-white"
-              >
-                Movies
-              </Link>
-
-              <Link
-                to="/about"
-                onClick={() => setMenuOpen(false)}
-                className="rounded-lg px-3 py-3 text-sm font-medium text-gray-300 transition hover:bg-white/5 hover:text-white"
-              >
-                About
-              </Link>
-
-              <Link
-                to="/movies"
-                onClick={() => setMenuOpen(false)}
-                className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-red-600 px-4 py-3 text-sm font-semibold transition hover:bg-red-700"
-              >
-                Explore Movies
-                <FiArrowRight />
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
-    </nav>
+    </header>
   );
 };
 
