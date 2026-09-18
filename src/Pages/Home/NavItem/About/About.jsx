@@ -1,9 +1,49 @@
-import { FiPlay, FiFilm, FiUsers, FiStar } from "react-icons/fi";
+import { FiPlay, FiFilm, FiUsers, FiStar, FiArrowRight } from "react-icons/fi";
 
 const About = () => {
   return (
     <div className="">
       {/* Hero */}
+      <section className="relative h-screen min-h-[650px] w-full overflow-hidden bg-black">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+          }}
+        />
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/45" />
+
+        {/* Extra cinematic gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/60" />
+
+        {/* Hero content */}
+        <div className="relative z-10 flex h-full items-center justify-center">
+          <div className="relative w-full text-center">
+            {/* Small text */}
+            <p className="mb-3 font-sans text-[9px] uppercase tracking-[0.45em] text-white/80 md:text-[10px]">
+              before and after
+            </p>
+
+            {/* Main title */}
+            <h1 className="relative font-serif text-[52px] font-medium uppercase leading-none tracking-[0.12em] text-white sm:text-[70px] md:text-[100px] lg:text-[125px]">
+              about us
+            </h1>
+          </div>
+        </div>
+
+        {/* Bottom scroll indicator */}
+        <div className="absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3">
+          <span className="font-sans text-[7px] uppercase tracking-[0.35em] text-white/60">
+            Scroll
+          </span>
+
+          <span className="h-8 w-px bg-white/40" />
+        </div>
+      </section>
       <section className="relative overflow-hidden border-b border-slate-800">
         <div className="absolute inset-0 " />
 
@@ -28,140 +68,85 @@ const About = () => {
       </section>
 
       {/* About Content */}
-      <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
-        <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
-          {/* Image / Visual */}
-          <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900">
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+      <section
+        className="relative overflow-hidden bg-fixed bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1589569334232-fdc917c38226?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-slate-950/85" />
 
-            <img
-              src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80"
-              alt="Cinema"
-              className="h-[420px] w-full object-cover opacity-75"
-            />
+        {/* Content */}
+        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+            {/* LEFT - Stats */}
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-1 lg:gap-10">
+              {/* 3 Years */}
+              <div className="border-l-2 border-blue-500 pl-6">
+                <h3 className="text-5xl font-bold text-white">
+                  3<span className="text-blue-500">+</span>
+                </h3>
 
-            <div className="absolute bottom-0 left-0 p-8">
-              <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-600">
-                <FiPlay size={22} />
+                <p className="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+                  Years of Experience
+                </p>
               </div>
 
-              <h2 className="text-2xl font-bold">
-                Every story deserves to be discovered.
+              {/* Movies */}
+              <div className="border-l-2 border-blue-500 pl-6">
+                <h3 className="text-5xl font-bold text-white">
+                  500<span className="text-blue-500">+</span>
+                </h3>
+
+                <p className="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+                  Movies & Films
+                </p>
+              </div>
+
+              {/* Awards */}
+              <div className="border-l-2 border-blue-500 pl-6">
+                <h3 className="text-5xl font-bold text-white">
+                  25<span className="text-blue-500">+</span>
+                </h3>
+
+                <p className="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+                  Film Awards
+                </p>
+              </div>
+            </div>
+
+            {/* RIGHT - Content */}
+            <div className="max-w-2xl">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-blue-400">
+                Who We Are
+              </p>
+
+              <h2 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+                Stories that stay with you.
               </h2>
-            </div>
-          </div>
 
-          {/* Text */}
-          <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-400">
-              Who We Are
-            </p>
-
-            <h2 className="text-3xl font-bold sm:text-4xl">
-              More than just a movie website.
-            </h2>
-
-            <p className="mt-6 leading-7 text-slate-400">
-              We created this platform for people who love movies and enjoy
-              discovering new stories. Whether you are looking for a popular
-              blockbuster, an old classic, or something completely new, our goal
-              is to help you find it without making the experience complicated.
-            </p>
-
-            <p className="mt-4 leading-7 text-slate-400">
-              From movie information and genres to ratings and recommendations,
-              everything is organized in one simple place so you can spend less
-              time searching and more time watching.
-            </p>
-
-            <button className="mt-8 inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold transition hover:bg-blue-500">
-              <FiPlay />
-              Explore Movies
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="border-y border-slate-800 bg-slate-900/40">
-        <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-blue-400">
-              Why Choose Us
-            </p>
-
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-              Made for movie lovers
-            </h2>
-
-            <p className="mt-4 text-slate-400">
-              Everything is built around making your movie discovery experience
-              simple and enjoyable.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {/* Card 1 */}
-            <div className="border border-slate-800 bg-slate-950 p-7">
-              <div className="mb-5 flex h-12 w-12 items-center justify-center bg-blue-600/10 text-blue-500">
-                <FiFilm size={24} />
-              </div>
-
-              <h3 className="text-xl font-semibold">Huge Collection</h3>
-
-              <p className="mt-3 text-sm leading-6 text-slate-400">
-                Explore movies from different genres, years, and categories all
-                in one place.
+              <p className="mt-6 max-w-xl text-base leading-8 text-slate-300">
+                We created this platform for people who love movies and enjoy
+                discovering new stories. From blockbuster releases to timeless
+                classics, we bring everything together in one simple cinematic
+                experience.
               </p>
-            </div>
 
-            {/* Card 2 */}
-            <div className="border border-slate-800 bg-slate-950 p-7">
-              <div className="mb-5 flex h-12 w-12 items-center justify-center bg-blue-600/10 text-blue-500">
-                <FiStar size={24} />
-              </div>
-
-              <h3 className="text-xl font-semibold">Discover Favorites</h3>
-
-              <p className="mt-3 text-sm leading-6 text-slate-400">
-                Find highly rated movies and discover stories you may not have
-                seen before.
+              <p className="mt-4 max-w-xl text-base leading-8 text-slate-400">
+                Discover movies, explore genres, find ratings, and uncover your
+                next favorite film — all without making the experience
+                complicated.
               </p>
-            </div>
 
-            {/* Card 3 */}
-            <div className="border border-slate-800 bg-slate-950 p-7">
-              <div className="mb-5 flex h-12 w-12 items-center justify-center bg-blue-600/10 text-blue-500">
-                <FiUsers size={24} />
-              </div>
-
-              <h3 className="text-xl font-semibold">For Everyone</h3>
-
-              <p className="mt-3 text-sm leading-6 text-slate-400">
-                A simple and responsive experience designed for movie fans on
-                every device.
-              </p>
+              <button className="mt-8 inline-flex items-center gap-3  px-7 py-3.5 font-semibold text-white transition duration-300 hover:bg-white border-white border-2 hover:text-black cursor-pointer">
+                <FiPlay size={18} />
+                Explore Movies
+                <FiArrowRight size={18} />
+              </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="mx-auto max-w-7xl px-6 py-20 text-center sm:px-8 lg:px-12">
-        <div className="border border-slate-800 bg-gradient-to-r from-blue-950/40 to-slate-900 p-10 sm:p-14">
-          <h2 className="text-3xl font-bold sm:text-4xl">
-            Ready to find your next movie?
-          </h2>
-
-          <p className="mx-auto mt-4 max-w-2xl text-slate-400">
-            Browse our collection and discover something you'll want to watch
-            tonight.
-          </p>
-
-          <button className="mt-8 inline-flex items-center gap-2 rounded-lg bg-blue-600 px-7 py-3 font-semibold transition hover:bg-blue-500">
-            Browse Movies
-            <FiPlay />
-          </button>
         </div>
       </section>
     </div>
