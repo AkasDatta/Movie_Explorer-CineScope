@@ -1,0 +1,13 @@
+@keyframes movie-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.movie-marquee {
+  animation: movie-marquee 30s linear infinite;
+}

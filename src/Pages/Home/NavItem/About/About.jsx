@@ -1,9 +1,43 @@
-import { FiPlay, FiFilm, FiUsers, FiStar, FiArrowRight } from "react-icons/fi";
+import { FiPlay, FiArrowRight } from "react-icons/fi";
+import "./About.css";
 
 const About = () => {
+  const movies = [
+    {
+      name: "Interstellar",
+      provider: "Netflix",
+    },
+    {
+      name: "Dune",
+      provider: "HBO Max",
+    },
+    {
+      name: "Inception",
+      provider: "Prime Video",
+    },
+    {
+      name: "The Batman",
+      provider: "HBO Max",
+    },
+    {
+      name: "Oppenheimer",
+      provider: "Prime Video",
+    },
+    {
+      name: "Avatar",
+      provider: "Disney+",
+    },
+    {
+      name: "Gladiator",
+      provider: "Paramount+",
+    },
+  ];
+
   return (
-    <div className="">
-      {/* Hero */}
+    <div className=" ">
+      {/* =========================
+          HERO SECTION
+      ========================== */}
       <section className="relative h-screen min-h-[650px] w-full overflow-hidden bg-black">
         {/* Background Image */}
         <div
@@ -14,28 +48,26 @@ const About = () => {
           }}
         />
 
-        {/* Dark overlay */}
+        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/45" />
 
-        {/* Extra cinematic gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/60" />
+        {/* Cinematic Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70" />
 
-        {/* Hero content */}
+        {/* Hero Content */}
         <div className="relative z-10 flex h-full items-center justify-center">
-          <div className="relative w-full text-center">
-            {/* Small text */}
+          <div className="w-full text-center">
             <p className="mb-3 font-sans text-[9px] uppercase tracking-[0.45em] text-white/80 md:text-[10px]">
-              before and after
+              Before and After
             </p>
 
-            {/* Main title */}
-            <h1 className="relative font-serif text-[52px] font-medium uppercase leading-none tracking-[0.12em] text-white sm:text-[70px] md:text-[100px] lg:text-[125px]">
-              about us
+            <h1 className="font-serif text-[52px] font-medium uppercase leading-none tracking-[0.12em] text-white sm:text-[70px] md:text-[100px] lg:text-[125px]">
+              About Us
             </h1>
           </div>
         </div>
 
-        {/* Bottom scroll indicator */}
+        {/* Scroll Indicator */}
         <div className="absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3">
           <span className="font-sans text-[7px] uppercase tracking-[0.35em] text-white/60">
             Scroll
@@ -44,19 +76,21 @@ const About = () => {
           <span className="h-8 w-px bg-white/40" />
         </div>
       </section>
-      <section className="relative overflow-hidden border-b border-slate-800">
-        <div className="absolute inset-0 " />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12">
+      {/* =========================
+          INTRO SECTION
+      ========================== */}
+      <section className="relative overflow-hidden border-b border-slate-800">
+        <div className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-blue-400">
               About Our Website
             </p>
 
-            <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            <h2 className="text-4xl font-bold leading-tight tracking-tight text-black sm:text-5xl lg:text-6xl">
               Your place for
               <span className="text-blue-500"> great movies.</span>
-            </h1>
+            </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg">
               Discover movies, explore new stories, and find something worth
@@ -67,7 +101,9 @@ const About = () => {
         </div>
       </section>
 
-      {/* About Content */}
+      {/* =========================
+          ABOUT CONTENT
+      ========================== */}
       <section
         className="relative overflow-hidden bg-fixed bg-cover bg-center"
         style={{
@@ -75,15 +111,17 @@ const About = () => {
             "url('https://images.unsplash.com/photo-1589569334232-fdc917c38226?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
         }}
       >
-        {/* Dark Overlay */}
+        {/* Dark Background Overlay */}
         <div className="absolute inset-0 bg-slate-950/85" />
 
         {/* Content */}
         <div className="relative mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-            {/* LEFT - Stats */}
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-1 lg:gap-10">
-              {/* 3 Years */}
+            {/* =========================
+                LEFT - STATISTICS
+            ========================== */}
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-1 lg:gap-10">
+              {/* Experience */}
               <div className="border-l-2 border-blue-500 pl-6">
                 <h3 className="text-5xl font-bold text-white">
                   3<span className="text-blue-500">+</span>
@@ -117,7 +155,9 @@ const About = () => {
               </div>
             </div>
 
-            {/* RIGHT - Content */}
+            {/* =========================
+                RIGHT - CONTENT
+            ========================== */}
             <div className="max-w-2xl">
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-blue-400">
                 Who We Are
@@ -140,12 +180,70 @@ const About = () => {
                 complicated.
               </p>
 
-              <button className="mt-8 inline-flex items-center gap-3  px-7 py-3.5 font-semibold text-white transition duration-300 hover:bg-white border-white border-2 hover:text-black cursor-pointer">
+              <button
+                type="button"
+                className="mt-8 inline-flex cursor-pointer items-center gap-3 border-2 border-white px-7 py-3.5 font-semibold text-white transition duration-300 hover:bg-white hover:text-black"
+              >
                 <FiPlay size={18} />
-                Explore Movies
+
+                <span>Explore Movies</span>
+
                 <FiArrowRight size={18} />
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================
+          MOVIE MARQUEE
+      ========================== */}
+      <section className="overflow-hidden border-y border-slate-800 bg-white py-12">
+        <div className="movie-marquee flex w-max">
+          {/* First Set */}
+          <div className="flex items-center">
+            {movies.map((movie, index) => (
+              <div
+                key={`first-${index}`}
+                className="mx-10 flex items-center gap-5 whitespace-nowrap"
+              >
+                {/* Movie Name */}
+                <span className="text-xl font-bold tracking-tight text-black">
+                  {movie.name}
+                </span>
+
+                {/* Provider */}
+                <span className="border border-blue-500/40 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-blue-400">
+                  {movie.provider}
+                </span>
+
+                {/* Separator */}
+                <span className="text-slate-700">◆</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Second Set - Required for Infinite Loop */}
+          <div className="flex items-center">
+            {movies.map((movie, index) => (
+              <div
+                key={`second-${index}`}
+                className="mx-10 flex items-center gap-5 whitespace-nowrap"
+              >
+                {/* Movie Name */}
+                <span className="text-xl font-bold tracking-tight text-red-500">
+                  {movie.name}
+                </span>
+
+                {/* Provider */}
+                <span className="border border-blue-500/40 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-blue-400">
+                  {movie.provider}
+                </span>
+
+                {/* Separator */}
+                <span className="text-slate-700">◆</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
