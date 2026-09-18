@@ -51,6 +51,10 @@ const Banner = () => {
             <span>2026</span>
             <span>Drama</span>
           </div>
+
+          <button className="group mx-auto mt-12 flex items-center justify-center border border-white/50 transition-all duration-300 px-6 cursor-pointer py-3 text-white hover:bg-white hover:text-black">
+            Explore More
+          </button>
         </div>
       </div>
 
