@@ -5,7 +5,7 @@ import LandingPage from "../Pages/Home/LandingPage/LandingPage";
 import About from "../Pages/Home/NavItem/About/About";
 import Blog from "../Pages/Home/NavItem/Blog/Blog";
 import Movies from "../Pages/Home/NavItem/Movies/Movies";
-import MovieDetails from "../Pages/Home/NavItem/Movies/MovieDetails";
+import MovieDetails from "../Pages/Home/LandingPage/MovieCardLP/MovieDetails";
 
 export const router = createBrowserRouter([
   {

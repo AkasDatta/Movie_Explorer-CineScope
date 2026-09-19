@@ -43,10 +43,11 @@ const MovieCardLP = () => {
           </h1>
         </div>
 
-        {/* Shows Grid  */}
+        {/* Shows Grid */}
         <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {shows.slice(0, 12).map((show) => (
-            <div
+            <Link
+              to={`/movies/${show.id}`}
               key={show.id}
               className="group overflow-hidden bg-zinc-900 transition duration-300 hover:-translate-y-1"
             >
@@ -83,7 +84,7 @@ const MovieCardLP = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
