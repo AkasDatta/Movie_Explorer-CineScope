@@ -1,13 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  FiMenu,
-  FiSearch,
-  FiUser,
-  FiInstagram,
-  FiFacebook,
-  FiX,
-} from "react-icons/fi";
+import { FiMenu, FiSearch, FiInstagram, FiFacebook, FiX } from "react-icons/fi";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

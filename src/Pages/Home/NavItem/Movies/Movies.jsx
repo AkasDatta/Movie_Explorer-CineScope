@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FiSearch, FiX } from "react-icons/fi";
 import MovieCard from "./MovieCard";
 
@@ -74,7 +74,7 @@ const Movies = () => {
         const data = await response.json();
 
         // Search API returns:
-        // [{ score: ..., show: {...} }]
+
         const searchResults = data.map((item) => item.show);
 
         setShows(searchResults);

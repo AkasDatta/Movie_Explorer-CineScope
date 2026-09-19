@@ -39,7 +39,10 @@ const MovieDetails = () => {
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-black text-white">
-        <p className="text-zinc-400">Loading movie details...</p>
+        <div className="flex flex-col items-center gap-4">
+          <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-700 border-t-blue-500"></div>
+          <p className="text-sm text-gray-400">Loading movie details...</p>
+        </div>
       </div>
     );
   }
