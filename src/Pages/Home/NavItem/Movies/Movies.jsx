@@ -103,10 +103,6 @@ const Movies = () => {
       <div className="mx-auto max-w-[1450px]">
         {/* Header */}
         <div className="mb-8">
-          <p className="mb-2 text-sm font-medium uppercase tracking-[4px] text-red-500">
-            Explore
-          </p>
-
           <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
             Browse Movies & Shows
           </h1>

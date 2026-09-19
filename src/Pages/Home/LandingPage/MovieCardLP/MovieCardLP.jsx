@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const MovieCardLP = () => {
   const [shows, setShows] = useState([]);
@@ -26,7 +27,7 @@ const MovieCardLP = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black px-4 py-24 text-white sm:px-6 lg:px-10">
+    <section className="bg-black px-4 py-24 text-white sm:px-6 lg:px-10">
       <div className="mx-auto max-w-[1450px]">
         {/* Heading */}
         <div className="mb-10">
@@ -39,9 +40,9 @@ const MovieCardLP = () => {
           </h1>
         </div>
 
-        {/* Shows Grid */}
+        {/* Shows Grid - Only 12 */}
         <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-          {shows.map((show) => (
+          {shows.slice(0, 12).map((show) => (
             <div
               key={show.id}
               className="group overflow-hidden bg-zinc-900 transition duration-300 hover:-translate-y-1"
@@ -82,8 +83,18 @@ const MovieCardLP = () => {
             </div>
           ))}
         </div>
+
+        {/* View All Button */}
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/movies"
+            className="border border-red-500 px-8 py-3 text-sm font-semibold uppercase tracking-wider text-white transition duration-300 hover:bg-red-500"
+          >
+            View All Movies
+          </Link>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FiArrowLeft, FiCalendar, FiClock, FiStar } from "react-icons/fi";
 
@@ -65,7 +65,7 @@ const MovieDetails = () => {
     : "N/A";
 
   return (
-    <div className="min-h-screen bg-black px-4 py-24 text-white sm:px-6 lg:px-10">
+    <div className="min-h-screen bg-black px-4 pt-36  text-white sm:px-6 lg:px-10 ">
       <div className="mx-auto max-w-[1200px]">
         {/* Back Button */}
         <Link
@@ -73,7 +73,7 @@ const MovieDetails = () => {
           className="mb-8 inline-flex items-center gap-2 text-sm text-zinc-400 transition hover:text-white"
         >
           <FiArrowLeft />
-          Back to Movies
+          Back to All Movies
         </Link>
 
         {/* Main Details */}
