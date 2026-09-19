@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FiMenu, FiSearch, FiInstagram, FiFacebook, FiX } from "react-icons/fi";
+import {
+  FiMenu,
+  FiSearch,
+  FiInstagram,
+  FiFacebook,
+  FiX,
+  FiLinkedin,
+  FiGithub,
+} from "react-icons/fi";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -67,25 +75,34 @@ const Navbar = () => {
         {/* Right Side */}
         <div className="flex items-center gap-4">
           {/* Explore Movies */}
-          <span className="hidden items-center gap-1.5 border px-2 py-1 font-sans text-[8px] uppercase tracking-[0.15em] md:flex">
+          <Link
+            to="/movies"
+            className="hidden items-center gap-1.5 border px-2 py-1 font-sans text-[8px] uppercase tracking-[0.15em] md:flex"
+          >
             <span className="text-[9px]">♥</span>
             Explore Movies
-          </span>
+          </Link>
 
-          {/* Search */}
-          <button className="hidden md:block">
-            <FiSearch size={12} strokeWidth={1} />
-          </button>
+          {/* Github */}
+          <a href="https://github.com/AkasDatta" className="hidden md:block">
+            <FiGithub size={12} strokeWidth={1} />
+          </a>
 
           {/* Instagram */}
-          <button className="hidden md:block">
+          <a
+            href="https://www.instagram.com/_akash_datta/"
+            className="hidden md:block"
+          >
             <FiInstagram size={12} strokeWidth={1} />
-          </button>
+          </a>
 
           {/* Facebook */}
-          <button className="hidden md:block">
+          <a
+            href="https://www.facebook.com/iamakasdatta/"
+            className="hidden md:block"
+          >
             <FiFacebook size={12} strokeWidth={1} />
-          </button>
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -112,7 +129,7 @@ const Navbar = () => {
       >
         <nav className="flex flex-col px-6 py-5">
           <Link
-            to="explore"
+            to="/movies"
             className="block md:hidden items-center gap-1.5 border px-2 py-1 font-sans text-[8px] uppercase tracking-[0.15em] md:flex mb-6"
           >
             <span className="text-[9px]">♥</span>
