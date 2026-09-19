@@ -107,7 +107,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="block lg:hidden"
+            className="block lg:hidden cursor-pointer"
             aria-label="Toggle menu"
           >
             {menuOpen ? (
